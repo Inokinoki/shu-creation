@@ -8,7 +8,7 @@
         <meta name="keywords" content="Lego;Robot;Creation;Shanghai University"/>
         <meta name="description" content="Shanghai University Creation Club Official Website"/>
 
-        <title>上海大学创幻社</title>
+        <title>上海大学创幻社 －－ 关于</title>
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -25,8 +25,13 @@
 
         <div class="container" role="main">
             <div class="jumbotron">
-                <h1>Theme example</h1>
-                <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+                <?php
+										require_once("./api/database.php");
+										$result = mysql_query("SELECT content FROM static_articles WHERE name = 'about'", $database);
+										$content = mysql_fetch_array($result);
+										echo $content["content"];
+										mysql_close($database);
+							?>
             </div>
         </div>
     </body>
