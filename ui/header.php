@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Inoki Shaw"/>
-        <meta name="keywords" content="Lego;Robot;Creation;Shanghai University"/>
-        <meta name="description" content="Shanghai University Creation Club Official Website"/>
-
-        <title>上海大学创幻社</title>
-        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-        <!--[if lt IE 9]>
-        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-static-top">
+		<nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Switch to this toggle button in small screen -->
@@ -29,18 +8,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="./index.html">上海大学创幻社</a>
+                    <a class="navbar-brand" href="./index.php">上海大学创幻社</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="./index.html">主页</a></li>
-                        <li><a href="./activity.html">社团活动</a></li>
-                        <li><a href="./menmber.html">主要成员</a></li>
-                        <li><a href="./join.html">报名通道</a></li>
-                        <li><a href="./contact.html">联系我们</a></li>
-                        <li class="active"><a href="./about.html">关于</a></li>
+                        <li><a href="./index.php">主页</a></li>
+                        <li><a href="./activity.php">社团活动</a></li>
+                        <li><a href="./menmber.php">主要成员</a></li>
+                        <li><a href="./join.php">报名通道</a></li>
+                        <li><a href="./contact.php">联系我们</a></li>
+                        <li><a href="./about.php">关于</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+<?php
+	$user="User";
+	if(true){
+?>
                         <li><a data-toggle="modal" data-target="#LoginModal"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 登录</a></li>
                     </ul>
                 </div>
@@ -67,12 +50,14 @@
                 </div>
             </div>
         </div>
-
-        <div class="container" role="main">
-            <div class="jumbotron">
-                <h1>Theme example</h1>
-                <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+<?php
+	}else{
+?>
+                        <li><a href="./user.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $user; ?></a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </body>
-</html>
+        </nav>
+<?php
+	}
+?>
