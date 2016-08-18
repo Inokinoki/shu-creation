@@ -20,18 +20,17 @@
     </head>
     <body>
         <?php
-					require_once("./ui/header.php");
-			?>
+            require_once("./ui/header.php");
+        ?>
 
         <div class="container" role="main">
             <div class="jumbotron">
                 <?php
-										require_once("./api/database.php");
-										$result = mysql_query("SELECT content FROM static_articles WHERE name = 'about'", $database);
-										$content = mysql_fetch_array($result);
-										echo $content["content"];
-										mysql_close($database);
-							?>
+                    require_once("./api/database.php");
+                    $result = $database->query("SELECT content FROM static_articles WHERE name = 'about'");
+                    $content = mysql_fetch_array($result);
+                    echo $content["content"];
+                ?>
             </div>
         </div>
     </body>
