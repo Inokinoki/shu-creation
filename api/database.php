@@ -23,7 +23,7 @@ class Database{
 	}
 
 	function count($key, $value, $table){
-			$result = mysql_query("SELECT * IN $table WHERE $key = '$value'");
+			$result = mysql_query("SELECT * IN $table WHERE $key = '$value'", $db);
 			return mysql_num_rows($result);
 	}
 
