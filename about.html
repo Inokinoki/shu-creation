@@ -41,11 +41,33 @@
                         <li class="active"><a href="./about.html">关于</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li></li>
+                        <li><a data-toggle="modal" data-target="#LoginModal"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 登录</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <!-- Login Modal -->
+        <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="LoginModalLabel">账户登录</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label>学号：</label><input name="username" id="input-username" type="text" class="form-control">
+                            <label>密码：</label><input name="password" id="input-password" type="password" class="form-control">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container" role="main">
             <div class="jumbotron">
                 <h1>Theme example</h1>
