@@ -1,6 +1,6 @@
 <?php
 class Database{
-	private $db_user	= 	"root";
+	private $db_user	= 	"creation";
 	private $db_pwd		= 	"creation";
 	private $db_host 	=	"localhost";
 	private $db_port 	=	"3306";
