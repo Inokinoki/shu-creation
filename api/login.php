@@ -15,7 +15,7 @@
 			if ( $result["password"]== $password ){
 				// Right password, generate uuid and set it to cookies
 				$_id = $result['_id'];
-				$uuid = $_id."-"uniqid();
+				$uuid = $_id."-".uniqid();
 				$database->query("UPDATE accounts SET uuid = '$uuid' WHERE _id = $_id");
 				echo "0|".$uuid;
 				// I'm sorry but we can't set cookies in ajax.
