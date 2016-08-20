@@ -20,12 +20,61 @@
     </head>
     <body>
 			<?php
-					require_once("./ui/header.php");
+				require_once("./ui/header.php");
 			?>
         <div class="container" role="main">
-            <div class="jumbotron">
-                <h1>Theme example</h1>
-                <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+            <div class="panel panel-default">
+            <?php // Logged and level==0(not a member)
+                if (!empty($_COOKIE["creation_uuid"])){
+                    require_once("./api/database");
+                    if ($database->exist("uuid", $_COOKIE["creation_uuid"] ,"accounts")){
+             ?>
+                <div class="panel-heading"><h2>报名表</h2></div>
+                    <div class="panel-body">
+                        <div class="col-xs-8" id="join_form">
+                            <form>
+                                <div class="form-group">
+                                    <label>真实姓名：</label>
+                                    <input name="name" type="text" class="form-control" placeholder="姓名">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>性别：</label>
+                                    <input name="sex" type="radio" value="1">小鲜肉（男）
+                                    <input name="sex" type="radio" value="2">小鲜花（女）
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xs-4" id="join_side">
+                            <h3>注意：</h3>
+                        </div>
+                    </div>
+                </div>
+            <?php
+                    } else {
+             ?>
+                <div class="panel-heading"><h2>登陆状态过期</h2></div>
+                    <div class="panel-body">
+                        <div class="alert alert-warning" role="alert">请您先点击
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#LoginModal">登录</button>
+                            按钮使用学号、密码登录。</div>
+                    </div>
+                </div>
+            <?php
+                    }
+                } else {
+                    // No creation_uuid
+            ?>
+                <div class="panel-heading"><h2>未登陆</h2></div>
+                    <div class="panel-body">
+                        <div class="alert alert-warning" role="alert">请您先点击
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#LoginModal">登录</button>
+                            按钮使用学号、密码登录。</div>
+                    </div>
+                </div>
+            <?php
+                }
+            ?>
             </div>
         </div>
     </body>
