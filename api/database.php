@@ -23,12 +23,18 @@ class Database{
 	}
 
 	function count($key, $value, $table){
-			$result = mysql_query("SELECT * IN $table WHERE $key = '$value'", $this->db);
+			$result = mysql_query("SELECT * FROM $table WHERE $key = '$value'", $this->db);
+			// echo "row number:".mysql_num_rows($result)."\n";
 			return mysql_num_rows($result);
 	}
 
 	function exist($key, $value, $table){
-			return count($key, $value, $table)==0 ? false : true;
+		$count_num = $this->count($key, $value, $table);
+		// echo "count:".$count_num."\n";
+		if ($count_num>0){
+			return true;
+		}
+		return false;
 	}
 
 	function __destruct() {

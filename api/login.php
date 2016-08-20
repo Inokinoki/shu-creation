@@ -6,21 +6,22 @@
 		// Require for database object
 		require_once("./database.php");
 		// Query username and set return code.
-		if ($database->exist("username", $username, "accounts")) {
+		if (!$database->exist("username", $username, "accounts")) {
 			echo 2;
 			exit();
 		} else {
 			$result = $database->query("SELECT * FROM accounts WHERE username = '$username'");
-			mysql_fetch_array($result);
-			if (!strcmp($result["password"], $password) ){
+			$result = mysql_fetch_array($result);
+			if ( $result["password"]== $password ){
+				// Right password, generate uuid and set it to cookies
 				$_id = $result['_id'];
 				$uuid = uniqid();
 				$database->query("UPDATE accounts SET uuid = '$uuid' WHERE _id = $_id");
-				echo 0;
+				echo "0|";
 				echo uniqid();
 				exit();
 			} else {
-				echo $result["password"];
+				// Wrong password, return 1.
 				echo 1;
 				exit();
 			}
