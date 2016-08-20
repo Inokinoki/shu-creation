@@ -12,18 +12,18 @@ class Database{
 			if(!$this->db){
 				die(mysql_error());
 			}
-			mysql_query("SET names utf8", $db);
+			mysql_query("SET names utf8", $this->db);
 			// Limit in creation database.
-			mysql_select_db("creation", $db);
+			mysql_select_db("creation", $this->db);
 		}
 	}
 
 	function query($db_query_expression){
-		return mysql_query($db_query_expression, $db);
+		return mysql_query($db_query_expression, $this->db);
 	}
 
 	function count($key, $value, $table){
-			$result = mysql_query("SELECT * IN $table WHERE $key = '$value'", $db);
+			$result = mysql_query("SELECT * IN $table WHERE $key = '$value'", $this->db);
 			return mysql_num_rows($result);
 	}
 
@@ -32,9 +32,12 @@ class Database{
 	}
 
 	function __destruct() {
-		if(!$db){
-			mysql_close($db);
+		if(!$this->db){
+			mysql_close($this->db);
 		}
 	}
 }
+
+$database = new Database();
+$database->connect();
 ?>
