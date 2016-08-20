@@ -6,7 +6,7 @@
 		// Require for database object
 		require_once("./database.php");
 		// Query username and set return code.
-		if ($database->exist("SELECT * FROM accounts WHERE username = '$username'")) {
+		if ($database->count("SELECT * FROM accounts WHERE username = '$username'")<1) {
 			echo 2;
 			exit();
 		} else {
@@ -20,6 +20,7 @@
 				echo uniqid();
 				exit();
 			} else {
+				echo $result["password"];
 				echo 1;
 				exit();
 			}
