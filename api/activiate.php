@@ -29,8 +29,8 @@
         } else {
             // Activiate to activiate.
             $database->query("INSERT INTO accounts
-                (username, password, nickname, name, _id, uuid) VALUES 
-                ('$username', '$password', '$username', '', null, '')");
+                (username, password, nickname, name, _id, uuid, level) VALUES 
+                ('$username', '$password', '$username', '', null, '', null)");
         }
         echo 0;
     } else {
