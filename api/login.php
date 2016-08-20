@@ -6,7 +6,7 @@
 		// Require for database object
 		require_once("./database.php");
 		// Query username and set return code.
-		if ($database->count("SELECT * FROM accounts WHERE username = '$username'")<1) {
+		if ($database->exist("username", $username, "accounts")) {
 			echo 2;
 			exit();
 		} else {
