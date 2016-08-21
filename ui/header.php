@@ -67,6 +67,7 @@
         else 
             echo $result["nickname"];
 ?></a></li>
+                         <li><a href="./api/logout.php">退出</a></li>
                     </ul>
                 </div>
             </div>
