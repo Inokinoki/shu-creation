@@ -26,7 +26,7 @@
             <div class="panel panel-default">
             <?php // Logged and level==0(not a member)
                 if (!empty($_COOKIE["creation_uuid"])){
-                    require_once("./api/database");
+                    require_once("./api/database.php");
                     if ($database->exist("uuid", $_COOKIE["creation_uuid"] ,"accounts")){
              ?>
                 <div class="panel-heading"><h2>报名表</h2></div>
