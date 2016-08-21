@@ -66,7 +66,7 @@ function onActiviateReceive(data, status){
     if (status){
         result = data.split("|");
         if (result[0] == "0"){
-            alert("激活成功，点击确定前往首页")
+            alert("激活成功，点击确定前往首页"+data);
             self.location = "./index.php";
         } else if (result[0] == "1"){
             document.getElementById("activiate-wrong-password").innerHTML = 

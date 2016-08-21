@@ -37,6 +37,10 @@ class Database{
 		return false;
 	}
 
+	function error(){
+		return mysql_errno($this->db).":".mysql_error($this->db);
+	}
+
 	function __destruct() {
 		if(!$this->db){
 			mysql_close($this->db);

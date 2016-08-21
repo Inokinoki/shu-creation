@@ -32,7 +32,7 @@
             // Activiate to activiate.
             $database->query("INSERT INTO accounts
                 (username, password, nickname, name, _id, uuid, level) VALUES 
-                ('$username', '$password', '$nickname', '$name', null, '', null)");
+                ('$username', '$password', '$nickname', '$name', null, '', 0)");
         }
         echo 0;
     } else {
