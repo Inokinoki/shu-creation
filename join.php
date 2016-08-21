@@ -96,8 +96,9 @@
                                     <textarea class="form-control" id="join-description"
                                         rows="5" placeholder="兴趣、爱好、特长、理想等，都可以"></textarea>
                                 </div>
-                                <button type="button" class="btn btn-success">报名</button>
-                                <button type="button" class="btn btn-danger">重置</button>
+                                <div id="join-tip"></div>
+                                <button type="button" class="btn btn-success" onclick="join();">报名</button>
+                                <button type="button" class="btn btn-danger" onclick="joinClean();">重置</button>
                             </form>
                         </div>
                         <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12" id="join_side">
@@ -105,6 +106,7 @@
                         </div>
                     </div>
                 </div>
+                <script src="./js/account.js"></script>
             <?php
                             } else {
             ?>
