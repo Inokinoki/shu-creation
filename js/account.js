@@ -42,13 +42,6 @@ function join(){
     var phone       = document.getElementById("join-phone").value;
     var email       = document.getElementById("join-email").value;
     var description = document.getElementById("join-description").value;
-    alert("name:"+ name +"\n"+
-        "sex:"+ sex +"\n"+
-        "username:"+ username +"\n"+
-        "campus:"+ campus +"\n"+
-        "phone:"+ phone +"\n"+
-        "email:"+ email +"\n"+
-        "description:"+ description);
     $.post("./api/join.php",
         {
             name     : name,
@@ -132,7 +125,6 @@ function onActiviateReceive(data, status){
 
 function onJoinReceive(data, status){
     if (status){
-        alert(data);
         result = data.split("|");
         if (result[0] == "0"){
             alert("申请提交成功，我们将在三个工作日内审核您的申请，并通过邮件回复您审核结果。\n请注意查收邮件！");
