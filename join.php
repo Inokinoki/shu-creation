@@ -31,7 +31,7 @@
              ?>
                 <div class="panel-heading"><h2>报名表</h2></div>
                     <div class="panel-body">
-                        <div class="col-xs-8" id="join_form">
+                        <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" id="join_form">
                             <form>
                                 <div class="form-group">
                                     <label>真实姓名：</label>
@@ -45,7 +45,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-xs-4" id="join_side">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="join_side">
                             <h3>注意：</h3>
                         </div>
                     </div>
