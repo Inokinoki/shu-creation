@@ -26,8 +26,8 @@
         <div class="container" role="main">
             <div class="jumbotron">
                 <?php
-                    include("./api/database.php");
-                    $result = $database->query("SELECT content FROM static_articles WHERE name = 'about'");
+                    require_once("./api/database.php");
+                    $result = $database->query("SELECT * FROM static_articles WHERE name = 'about'");
                     $content = mysql_fetch_array($result);
                     echo $content["content"];
                 ?>
