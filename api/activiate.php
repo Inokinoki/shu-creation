@@ -5,6 +5,8 @@
  */
     $username = $_POST["username"];
     $password = $_POST["password"];
+    $nickname = $_POST["nickname"];
+    $name     = $_POST["name"];
     
     $url = "http://passport.lehu.shu.edu.cn/LoginDo.aspx?action=1";
     $post_data = array ("username" => $username,"password" => $password);
@@ -30,7 +32,7 @@
             // Activiate to activiate.
             $database->query("INSERT INTO accounts
                 (username, password, nickname, name, _id, uuid, level) VALUES 
-                ('$username', '$password', '$username', '', null, '', null)");
+                ('$username', '$password', '$nickname', '$name', null, '', null)");
         }
         echo 0;
     } else {
