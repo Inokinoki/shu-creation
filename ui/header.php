@@ -22,7 +22,8 @@
                     <ul class="nav navbar-nav navbar-right">
 <?php
 	$user="User";
-	if(true){
+    require_once("./api/database.php");
+	if((!$database->exist("uuid", $_COOKIE["creation_uuid"], "accounts"))||empty($_COOKIE["creation_uuid"])){
 ?>
                         <li><a data-toggle="modal" data-target="#LoginModal"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 登录</a></li>
                     </ul>
@@ -42,18 +43,30 @@
                             <label>学号：</label><input name="username" id="input-username" type="text" class="form-control">
                             <label>密码：</label><input name="password" id="input-password" type="password" class="form-control">
                         </form>
+                        <div id="input-wrong-password"></div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary">登录</button>
+                        <button type="button" class="btn btn-primary" onclick="login()">登录</button>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="./js/md5.js"></script>
+        <script src="./js/account.js"></script>
 <?php
 	}else{
+        $uuid = $_COOKIE["creation_uuid"];
+        $result = $database->query("SELECT * FROM accounts WHERE uuid = '$uuid'");
+        $result = mysql_fetch_array($result);
 ?>
-                        <li><a href="./user.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $user; ?></a></li>
+                        <li><a href="./user.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+<?php 
+        if (empty($result["nickname"]))
+            echo $user;
+        else 
+            echo $result["nickname"];
+?></a></li>
                     </ul>
                 </div>
             </div>
