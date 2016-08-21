@@ -48,7 +48,7 @@
                                 </div>
                             </form>
                             <div id="activiate-wrong-password"></div>
-                            <button class="btn btn-danger" onclick="activiate()">激活</button>
+                            <button class="btn btn-danger" id="comfirm-button" onclick="activiate()">激活</button>
                         </div>
                         <div class="col-xs-6" id="join_side">
                             <h3>注意：</h3>

@@ -1,4 +1,5 @@
 function login(){
+    document.getElementById("comfirm-button").setAttribute("disabled","disabled");
     document.getElementById("input-wrong-password").innerHTML = "";
     var username = getUsername("input-username");
     var password = getPassword("input-password");
@@ -10,6 +11,7 @@ function login(){
 }
 
 function activiate(){
+    document.getElementById("comfirm-button").setAttribute("disabled","disabled");
     document.getElementById("activiate-wrong-password").innerHTML = 
         "<div class='alert alert-info' role='alert'>正在激活，请稍后...</div>";
     var username = document.getElementById("activiate-username").value;
@@ -26,6 +28,7 @@ function activiate(){
 }
 
 function join(){
+    document.getElementById("comfirm-button").setAttribute("disabled","disabled");
     document.getElementById("join-tip").innerHTML = 
         "<div class='alert alert-info' role='alert'>正在提交申请，请稍后...</div>";
     var name        = document.getElementById("join-name").value;
@@ -106,6 +109,7 @@ function onLoginReceive(data, status){
         document.getElementById("activiate-wrong-password").innerHTML = "";
     }
     cleanPassword();
+    document.getElementById("comfirm-button").removeAttribute("disabled");
 }
 
 function onActiviateReceive(data, status){
@@ -122,6 +126,7 @@ function onActiviateReceive(data, status){
         alert("网络错误，请稍后重试。");
         document.getElementById("activiate-wrong-password").innerHTML = "";
     }
+    document.getElementById("comfirm-button").removeAttribute("disabled");
     document.getElementById("activiate-password").value = "";
 }
 
@@ -137,4 +142,5 @@ function onJoinReceive(data, status){
         alert("网络错误，请稍后重试。");
         document.getElementById("join-tip").innerHTML = "";
     }
+    document.getElementById("comfirm-button").removeAttribute("disabled");
 }

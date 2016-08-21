@@ -97,7 +97,7 @@
                                         rows="5" placeholder="兴趣、爱好、特长、理想等，都可以"></textarea>
                                 </div>
                                 <div id="join-tip"></div>
-                                <button type="button" class="btn btn-success" onclick="join();">报名</button>
+                                <button type="button" id="comfirm-button" class="btn btn-success" onclick="join();">报名</button>
                                 <button type="button" class="btn btn-danger" onclick="joinClean();">重置</button>
                             </form>
                         </div>
