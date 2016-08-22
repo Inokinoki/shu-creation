@@ -33,7 +33,7 @@
                             $database->query("SELECT * FROM accounts WHERE uuid = '$uuid'"));
                         $student_name = $result["name"];
                         $student_id = $result["username"];
-                        if (!$database->exist("username", $student_id, "member")){
+                        if (!$database->exist("student_id", $student_id, "member")){
                             // Not a member
                             $request_result = $database->query("SELECT * FROM request WHERE username = '$student_id' AND state = 0");
                             if( mysql_num_rows($request_result)==0 ){
