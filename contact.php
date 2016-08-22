@@ -23,13 +23,13 @@
             require_once("./ui/header.php");
         ?>
         <div class="container" role="main">
-            <div class="panel panel-primary">
+            <div class="panel panel-primary" style="padding:0;">
                 <div class="panel-heading"><h2>联系方式</h2></div>
                 <table class="table table-hover">
                     <tbody>
                         <tr>
                             <td>地址</td>
-                            <td>中国上海市宝山区上大路98号B楼308室</td>
+                            <td>中国上海市宝山区上大路99号上海大学B楼308室</td>
                         </tr>
                         <tr>
                             <td>邮箱</td>
@@ -37,12 +37,8 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            <div class="panel panel-primary">
-                <div class='panel-body' style="padding:0;">
-                    <div class="embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="./map.html"></iframe>
-                    </div>
                 </div>
             </div>
             <div class="page-header">
