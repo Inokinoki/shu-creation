@@ -15,9 +15,18 @@
 </html>
 <script type="text/javascript">
 	// 百度地图API功能
-	var map = new BMap.Map("creation-map");    // 创建Map实例
-	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    var sContent =
+	"<div><h4 style='margin:0 0 5px 0;padding:0.2em 0'>上海大学 创幻社</h4>"+
+	"<p style='margin:0;line-height:1.5;font-size:1em;text-indent:2em'>上海大学创幻社位于上海大学宝山校区B楼308室。</p>" + 
+	"</div>";
+	var point = new BMap.Point(121.40204,31.319769);
+	var marker = new BMap.Marker(point);
+	var map = new BMap.Map("creation-map");
+	map.centerAndZoom(point, 18);
+	map.addControl(new BMap.MapTypeControl());
+	map.setCurrentCity("上海");
+	map.enableScrollWheelZoom(true);
+    var infoWindow = new BMap.InfoWindow(sContent);
+    map.addOverlay(marker);
+    marker.openInfoWindow(infoWindow);
 </script>

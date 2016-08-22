@@ -24,13 +24,6 @@
         ?>
         <div class="container" role="main">
             <div class="panel panel-primary">
-                <div class='panel-body'>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="./map.html"></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-primary">
                 <div class="panel-heading"><h2>联系方式</h2></div>
                 <table class="table table-hover">
                     <tbody>
@@ -44,6 +37,13 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="panel panel-primary">
+                <div class='panel-body' style="padding:0;">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="./map.html"></iframe>
+                    </div>
+                </div>
             </div>
             <div class="page-header">
                 <h2>联系方式 <small>主要成员</small></h2>
