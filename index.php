@@ -8,6 +8,8 @@
         <meta name="keywords" content="Lego;Robot;Creation;Shanghai University"/>
         <meta name="description" content="Shanghai University Creation Club Official Website"/>
 
+        <link rel="shortcut icon" href="/favicon.ico" />
+
         <title>上海大学创幻社</title>
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
