@@ -13,8 +13,8 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="./index.php">主页</a></li>
-                        <li><a href="./activity.php">社团活动</a></li>
-                        <li><a href="./menmber.php">主要成员</a></li>
+                        <!-- <li><a href="./activity.php">社团活动</a></li>
+                        // <li><a href="./menmber.php">主要成员</a></li> -->
                         <li><a href="./join.php">报名通道</a></li>
                         <li><a href="./contact.php">联系我们</a></li>
                         <li><a href="./about.php">关于</a></li>
