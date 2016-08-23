@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="./js/md5.js"></script>
+        <script src="./js/validate.js"></script>
         <script src="./js/account.js"></script>
 
         <!--[if lt IE 9]>
@@ -20,9 +22,30 @@
         <![endif]-->
     </head>
     <body>
-        <?php
-                require_once("./ui/header.php");
-        ?>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- Switch to this toggle button in small screen -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.php">上海大学创幻社</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./index.php">主页</a></li>
+                        <li><a href="./activity.php">社团活动</a></li>
+                        <li><a href="./menmber.php">主要成员</a></li>
+                        <li><a href="./join.php">报名通道</a></li>
+                        <li><a href="./contact.php">联系我们</a></li>
+                        <li><a href="./about.php">关于</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="container" role="main">
             <div class="panel panel-default">
                 <div class="panel-heading"><h2>账户激活</h2></div>
@@ -47,8 +70,8 @@
                                     <input name="name" id="activiate-name" type="text" class="form-control" placeholder="真实姓名">
                                 </div>
                             </form>
-                            <div id="activiate-wrong-password"></div>
-                            <button class="btn btn-danger" id="comfirm-button" onclick="activiate()">激活</button>
+                            <div id="wrong-tip"></div>
+                            <button class="btn btn-danger" id="comfirm-button" onclick="activiate();">激活</button>
                         </div>
                         <div class="col-xs-6" id="join_side">
                             <h3>注意：</h3>

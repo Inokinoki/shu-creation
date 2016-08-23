@@ -43,17 +43,15 @@
                             <label>学号：</label><input name="username" id="input-username" type="text" class="form-control">
                             <label>密码：</label><input name="password" id="input-password" type="password" class="form-control">
                         </form>
-                        <div id="input-wrong-password"></div>
+                        <div id="wrong-tip"></div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="button" id="comfirm-button" class="btn btn-primary" onclick="login()">登录</button>
+                        <button type="button" id="comfirm-button" class="btn btn-primary" onclick="login();">登录</button>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="./js/md5.js"></script>
-        <script src="./js/account.js"></script>
 <?php
 	}else{
         $uuid = $_COOKIE["creation_uuid"];
