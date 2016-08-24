@@ -17,6 +17,11 @@
         <script src="./js/md5.js"></script>
         <script src="./js/validate.js"></script>
         <script src="./js/account.js"></script>
+        <style>
+            .navbar-static-top{
+                margin-bottom:0;
+            }
+        </style>
 
         <!--[if lt IE 9]>
         <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -27,10 +32,46 @@
 			<?php
 					require_once("./ui/header.php");
 			?>
+        <div class="container">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="..." alt="...">
+                        <div class="carousel-caption">
+                            ...
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="..." alt="...">
+                        <div class="carousel-caption">
+                            ...
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="..." alt="...">
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="container" role="main">
-            <div class="jumbotron">
-                <h1>Theme example</h1>
-                <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+            <div class="hidden-sm hidden-xs col-md-12 embed-responsive embed-responsive-16by9">
+            <!-- Video -->
+                <embed  height="100%" width="100%" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" 
+                    src="http://static.hdslb.com/miniloader.swf" flashvars="aid=5982262&page=1" 
+                    pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
+                </embed>
             </div>
         </div>
     </body>
