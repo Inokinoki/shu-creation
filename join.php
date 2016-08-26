@@ -44,7 +44,7 @@
              ?>
                 <div class="panel-heading"><h2>报名表</h2></div>
                     <div class="panel-body">
-                        <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12" id="join_form">
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12" id="join_form">
                             <form>
                                 <div class="form-group">
                                     <h4>真实姓名：</h4>
@@ -104,7 +104,7 @@
                                 <button type="button" class="btn btn-danger" onclick="joinClean();">重置</button>
                             </form>
                         </div>
-                        <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12" id="join_side">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" id="join_side">
                             <h3>注意：</h3>
                         </div>
                     </div>

@@ -50,7 +50,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><h2>账户激活</h2></div>
                     <div class="panel-body">
-                        <div class="col-xs-6" id="activiate_form">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" id="activiate_form">
                             <form>
                                 <div class="form-group">
                                     <label>学号：</label>
@@ -73,7 +73,7 @@
                             <div id="wrong-tip"></div>
                             <button class="btn btn-danger" id="comfirm-button" onclick="activiate();">激活</button>
                         </div>
-                        <div class="col-xs-6" id="join_side">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="join_side">
                             <h3>注意：</h3>
                         </div>
                     </div>
