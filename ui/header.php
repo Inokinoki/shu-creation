@@ -22,7 +22,7 @@
                     <ul class="nav navbar-nav navbar-right">
 <?php
 	$user="User";
-    require_once("/shu-creation/api/database.php");
+    require_once("./api/database.php");
     $database = new Database();
     $database->connect();
 	if((!$database->exist("uuid", $_COOKIE["creation_uuid"], "accounts"))||empty($_COOKIE["creation_uuid"])){

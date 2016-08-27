@@ -30,7 +30,7 @@
             <?php // Logged and level==0(not a member)
                 $uuid = $_COOKIE["creation_uuid"];
                 if (!empty($uuid)){
-                    require_once("/shu-creation/api/database.php");
+                    require_once("./api/database.php");
                     $database = new Database();
                     $database->connect();
                     if ($database->exist("uuid", $uuid ,"accounts")){

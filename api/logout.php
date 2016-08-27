@@ -1,6 +1,6 @@
 <?php
     $uuid = $_COOKIE["creation_uuid"];
-    require_once("/shu-creation/api/database.php");
+    require_once("./database.php");
     $database = new Database();
     $database->connect();
     $database->query("UPDATE accounts SET uuid = '' WHERE uuid = '$uuid'");

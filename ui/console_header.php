@@ -18,7 +18,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="./user.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 <?php
-        require_once("/shu-creation/api/database.php");
+        require_once("./api/database.php");
         $database = new Database();
         $database->connect();
         $uuid = $_COOKIE["creation_uuid"];

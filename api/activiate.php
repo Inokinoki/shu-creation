@@ -22,7 +22,7 @@
     $passport_result = $passport_output.trim("|");
     if ($passport_result[0]==0){
         // Save user info into database
-        require_once("/shu-creation/api/database.php");
+        require_once("./database.php");
         $database = new Database();
         $database->connect();
         $password = md5($password);
