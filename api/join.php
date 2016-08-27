@@ -7,7 +7,9 @@
     $email    = $_POST["email"];
     $description = $_POST["description"];
 
-    require_once("./database.php");
+    require_once("/shu-creation/api/database.php");
+    $database = new Database();
+    $database->connect();
     $database->query("INSERT INTO request 
         (name, sex, campus, phone_number, email, username, description, _id, request_time, state) 
         VALUES ('$name', '$sex', '$campus', '$phone', '$email', '$username', '$description', null, null, 0)");

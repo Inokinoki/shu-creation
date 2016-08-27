@@ -29,7 +29,9 @@
         <div class="container" role="main">
             <div class="jumbotron">
                 <?php
-                    require_once("./api/database.php");
+                    require_once("/shu-creation/api/database.php");
+                    $database = new Database();
+                    $database->connect();
                     $result = $database->query("SELECT * FROM static_articles WHERE name = 'about'");
                     $content = mysql_fetch_array($result);
                     echo $content["content"];

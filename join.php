@@ -30,7 +30,9 @@
             <?php // Logged and level==0(not a member)
                 $uuid = $_COOKIE["creation_uuid"];
                 if (!empty($uuid)){
-                    require_once("./api/database.php");
+                    require_once("/shu-creation/api/database.php");
+                    $database = new Database();
+                    $database->connect();
                     if ($database->exist("uuid", $uuid ,"accounts")){
                         $result = mysql_fetch_array(
                             $database->query("SELECT * FROM accounts WHERE uuid = '$uuid'"));

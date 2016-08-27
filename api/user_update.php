@@ -2,7 +2,9 @@
     $uuid = $_COOKIE["creation_uuid"];  // Get uuid.
 
     if (!empty($uuid)){
-        require_once("./database.php");
+        require_once("/shu-creation/api/database.php");
+        $database = new Database();
+        $database->connect();
         if ($database->exist("uuid", $uuid, "accounts")){
             $name = $_POST["name"];
             $nickname = $_POST["nickname"];

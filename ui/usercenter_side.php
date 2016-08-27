@@ -27,7 +27,7 @@
                         </ul>
                     </li>
 <?php
-    require_once("../api/level.php");
+    require_once("/shu-creation/api/level.php");
     $level = new LevelSystem(3, $_COOKIE["creation_uuid"]);
     if ($level->validate()){
 ?>

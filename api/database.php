@@ -47,7 +47,4 @@ class Database{
 		}
 	}
 }
-
-$database = new Database();
-$database->connect();
 ?>

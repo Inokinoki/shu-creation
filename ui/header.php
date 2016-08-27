@@ -22,7 +22,9 @@
                     <ul class="nav navbar-nav navbar-right">
 <?php
 	$user="User";
-    require_once("./api/database.php");
+    require_once("/shu-creation/api/database.php");
+    $database = new Database();
+    $database->connect();
 	if((!$database->exist("uuid", $_COOKIE["creation_uuid"], "accounts"))||empty($_COOKIE["creation_uuid"])){
 ?>
                         <li><a data-toggle="modal" data-target="#LoginModal"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 登录</a></li>

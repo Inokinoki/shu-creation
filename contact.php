@@ -48,7 +48,9 @@
                 <h2>联系方式 <small>主要成员</small></h2>
             </div>
 <?php
-    require_once("./api/database.php");
+    require_once("/shu-creation/api/database.php");
+    $database = new Database();
+    $database->connect();
     // Get boss info
     $boss_result = $database->query("SELECT * FROM member WHERE level = 4");
     while ($boss_info = mysql_fetch_array($boss_result)){

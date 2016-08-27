@@ -14,7 +14,9 @@ class LevelSystem{
 
     function validate(){
         if (!empty($this->uuid)){
-            require_once("./database.php");
+            require_once("/shu-creation/api/database.php");
+            $database = new Database();
+            $database->connect();
             $result = $database->query("SELECT * FROM accounts WHERE uuid = '$this->uuid'");
             $row = mysql_fetch_array($result);
             if ($row["level"]>=$this->level){
