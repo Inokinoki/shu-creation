@@ -30,7 +30,7 @@
     </head>
     <body>
 			<?php
-					require_once("./ui/header.php");
+					require_once("./header.php");
 			?>
         <!--<div class="container">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">

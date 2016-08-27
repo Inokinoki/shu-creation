@@ -7,7 +7,7 @@
     $email    = $_POST["email"];
     $description = $_POST["description"];
 
-    require_once("./database.php");
+    require_once("database.php");
     $database = new Database();
     $database->connect();
     $database->query("INSERT INTO request 

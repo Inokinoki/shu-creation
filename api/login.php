@@ -4,7 +4,7 @@
 		// Login ok-0; wrong password-1; Not activaite-2.
 		
 		// Require for database object
-		require_once("./database.php");
+		require_once("database.php");
 		$database = new Database();
 		$database->connect();
 		// Query username and set return code.

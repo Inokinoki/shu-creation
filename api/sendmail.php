@@ -7,7 +7,7 @@
         if (!empty($mailsubject)) {
             if (!empty($mailbody)) {
                 // Require level >=3;
-                require_once("./level.php");
+                require_once("level.php");
                 $level = new LevelSystem(3, $_COOKIE["creation_uuid"]);
                 if ($level->validate()){
                     // Send email to target user, permission level >= 3

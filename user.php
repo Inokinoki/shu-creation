@@ -24,11 +24,11 @@
         <![endif]-->
     </head>
     <body>
-        <?php require_once("./ui/console_header.php"); ?>
+        <?php require_once("./console_header.php"); ?>
         <div class="wrapper row container-fluid">
             <div class="navlist hidden-xs hidden-sm col-md-3 col-lg-2">
                 <ul class="nav-ul nav-root affix">
-                    <?php require_once("./ui/usercenter_side.php"); ?>
+                    <?php require_once("./usercenter_side.php"); ?>
                 </ul>
             </div>
             <div id="main-container" class="main-container col-xs-12 col-sm-12 col-md-9 col-lg-10">
