@@ -1,0 +1,83 @@
+.wrapper{
+    position:absolute;
+    height:100%;
+    width:100%;
+    padding-right:0;
+    padding-left:0;
+    margin:0;
+}
+.navlist{
+    float:left;
+    height:100%;
+    padding-top:70px;
+    background-color:rgb(41,48,56);
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.main-container{
+    float:left;
+    height:100%;
+    padding-top:70px;
+    padding-right:0;
+    margin:0;
+    background-color:rgb(208,208,208);
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.wait-alert{
+    text-align: center;
+    position: absolute;
+    left:40%;
+    right:40%;
+    top:35%;
+    bottom:40%;
+    margin: 0 auto;
+}
+.wait-alert > .panel-heading{
+    text-align: right;
+}
+.nav-ul{
+    padding-left: 30px;
+}
+.nav-root > li {
+    list-style-type:none;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.nav-root > li > a{
+    font-size:1.6em;
+    color:rgb(180,180,180);
+    text-decoration:none;
+}
+.nav-root > li > a:hover{
+    font-size:1.6em;
+    color:white;
+    text-decoration:none;
+}
+.nav-root > li > a:visited{
+    font-size:1.6em;
+    color:rgb(180,180,180);
+    text-decoration:none;
+}
+li > a{
+    font-size:1.4em;
+    color:rgb(180,180,180);
+    text-decoration:none;
+}
+li > a:hover{
+    font-size:1.4em;
+    color:white;
+    text-decoration:none;
+}
+li > a:visited{
+    font-size:1.4em;
+    color:rgb(180,180,180);
+    text-decoration:none;
+}
+.navbar-right > li > a{
+    font-size:14px;
+}
+.navbar-right > li > a:hover{
+    font-size:14px;
+}
+
