@@ -3,7 +3,7 @@
     $level = new LevelSystem(3, $_COOKIE["creation_uuid"]);
     if ($level->validate()){
 ?>
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <thead>
     <tr>
         <th>Uid</th>
