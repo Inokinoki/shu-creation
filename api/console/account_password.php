@@ -25,6 +25,18 @@
         <div id="wrong-tip"></div>
         <button class="btn btn-danger" id="comfirm-button" onclick="modifyPassword();">修改</button>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3>说明</h3>
+            </div>
+            <div class="panel-body">
+                <p>在这里您可以修改您的账户在本网站的密码，
+                但是我们不推荐您这么做，这会导致您在本网站的密码与上海大学统一认证系统密码不一致，
+                可能会造成密码遗忘等后果。</p>
+            </div>
+        </div>
+    </div>
 </div>
 <?php
     } else {
