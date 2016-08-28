@@ -28,11 +28,11 @@
             echo "<td>";
             $user_level = $user_row["level"];
             switch($user_level){
-                case 0:echo "网站会员";break;
-                case 1:echo "预备社员";break;
-                case 2:echo "正式社员";break;
-                case 3:echo "副社长";break;
-                case 4:echo "社长";break;
+                case 0:echo "<span class='label label-default'>网站会员</span>";break;
+                case 1:echo "<span class='label label-warning'>预备社员</span>";break;
+                case 2:echo "<span class='label label-info'>正式社员</span>";break;
+                case 3:echo "<span class='label label-success'>副社长</span>";break;
+                case 4:echo "<span class='label label-primary'>社长</span>";break;
             }
             echo "</td>";
             echo "</tr>";
