@@ -216,3 +216,52 @@ function onJoinReceive(data, status){
     }
     document.getElementById("comfirm-button").removeAttribute("disabled");
 }
+
+function modifyPassword(){
+    document.getElementById("comfirm-button").setAttribute("disabled","disabled");
+    document.getElementById("wrong-tip").innerHTML = 
+        "<div class='alert alert-info' role='alert'>检测中</div>";
+    var old_password = document.getElementById("old-password").value;
+    var new_password = document.getElementById("new-password").value;
+    var confirm_password = document.getElementById("confirm-password").value;
+    if (new_password==confirm_password){
+        if (new_password.length >= 4){
+            document.getElementById("wrong-tip").innerHTML = 
+                "<div class='alert alert-info' role='alert'>发送中</div>";
+            new_password = hex_md5(new_password);
+            $.post("./api/password.php",
+            {
+                old_password : old_password,
+                new_password : new_password
+            }, onPasswordReceive );
+        } else {
+            document.getElementById("wrong-tip").innerHTML = 
+            "<div class='alert alert-danger' role='alert'>新密码长度过短</div>";
+            document.getElementById("comfirm-button").removeAttribute("disabled");
+        }
+    } else {
+        document.getElementById("wrong-tip").innerHTML = 
+            "<div class='alert alert-danger' role='alert'>密码不一致</div>";
+        document.getElementById("comfirm-button").removeAttribute("disabled");
+    }
+}
+
+function onPasswordReceive(data, status){
+    if (status){
+        result = data.split("|");
+        if (result[0] == "0"){
+            document.getElementById("wrong-tip").innerHTML = 
+                "<div class='alert alert-success' role='alert'>密码修改成功</div>";
+        } else if (result[0] == "1" || result[0] == "2"){
+            document.getElementById("wrong-tip").innerHTML = 
+                "<div class='alert alert-danger' role='alert'>登陆状态失效</div>";
+        } else if (result[0] == "3"){
+            document.getElementById("wrong-tip").innerHTML = 
+                "<div class='alert alert-danger' role='alert'>旧密码错误！</div>";
+        }
+    } else {
+        alert("网络错误，请稍后重试。");
+        document.getElementById("wrong-tip").innerHTML = "";
+    }
+    document.getElementById("comfirm-button").removeAttribute("disabled");
+}

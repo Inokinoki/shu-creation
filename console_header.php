@@ -11,8 +11,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav hidden-lg hidden-md">
-                        <li><a href="javascript:user_center('password')">密码修改</a></li>
-                        <li><a href="javascript:user_center('person')">个人信息</a></li>
+                        <li><a href="javascript:user_center('account_password',0,1)">密码修改</a></li>
+                        <li><a href="javascript:user_center('person_info',0,1)">个人中心</a></li>
                         <li class="hidden-sm"><a>更多功能请在PC端访问</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">

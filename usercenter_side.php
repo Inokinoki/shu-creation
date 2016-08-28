@@ -2,8 +2,8 @@
                         <a href="#AccountCollapse" data-toggle="collapse" data-target="#AccountCollapse" 
                             aria-expanded="false" aria-controls="AccountCollapse">账户管理</a>
                         <ul class="nav-ul collapse" id="AccountCollapse">
-                            <li><a href="javascript:user_center('person_info',0,1)">个人资料</a></li>
-                            <li><a href="javascript:user_center('password',0,1)">修改密码</a></li>
+                            <li><a href="javascript:user_center('person_info',0,1)">个人中心</a></li>
+                            <li><a href="javascript:user_center('account_password',0,1)">修改密码</a></li>
                         </ul>
                     </li>
                     <li>
