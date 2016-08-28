@@ -37,8 +37,8 @@
             echo "<td>".$campus_row["name"]."</td>";
             echo "<td>".$request_row["email"]."</td>";
             echo "<td>".$request_row["phone_number"]."</td>";
-            echo "<td><a href='javascript:user_center(request_detail,"
-                .$request_row["_id"].")'>详情</a>";
+            echo "<td><a href=\"javascript:user_center('request_detail', "
+                .$request_row["_id"].", 1)\">详情</a>";
             echo "</td>";
             echo "</tr>";
         }
