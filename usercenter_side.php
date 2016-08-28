@@ -35,6 +35,7 @@
                         <a href="#ManageCollapse" data-toggle="collapse" data-target="#ManageCollapse" 
                             aria-expanded="false" aria-controls="ManageCollapse">社团管理</a>
                         <ul class="nav-ul collapse" id="ManageCollapse">
+                            <li><a href="javascript:user_center('member_list')">社员列表</a></li>
                             <li><a href="javascript:user_center('user_request')">加入申请</a></li>
                             <li><a href="javascript:user_center('user_list')">用户列表</a></li>
                         </ul>
