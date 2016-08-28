@@ -1,9 +1,11 @@
-function user_center(key) {
+function user_center(key, extra, page) {
     document.getElementById("wait-alert").hidden = false;
     $('#wait-modal').modal('show');
     $.post("./api/usercenter.php",
             {
-                mode : key
+                mode    :   key,
+                extra   :   extra,
+                page    :   page
             }, onUsercenterReceive );
 }
 

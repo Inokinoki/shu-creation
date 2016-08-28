@@ -2,8 +2,8 @@
                         <a href="#AccountCollapse" data-toggle="collapse" data-target="#AccountCollapse" 
                             aria-expanded="false" aria-controls="AccountCollapse">账户管理</a>
                         <ul class="nav-ul collapse" id="AccountCollapse">
-                            <li><a href="javascript:user_center('person')">个人资料</a></li>
-                            <li><a href="javascript:user_center('password')">修改密码</a></li>
+                            <li><a href="javascript:user_center('person',0,1)">个人资料</a></li>
+                            <li><a href="javascript:user_center('password',0,1)">修改密码</a></li>
                         </ul>
                     </li>
                     <li>
@@ -35,9 +35,9 @@
                         <a href="#ManageCollapse" data-toggle="collapse" data-target="#ManageCollapse" 
                             aria-expanded="false" aria-controls="ManageCollapse">社团管理</a>
                         <ul class="nav-ul collapse" id="ManageCollapse">
-                            <li><a href="javascript:user_center('member_list')">社员列表</a></li>
-                            <li><a href="javascript:user_center('user_request')">加入申请</a></li>
-                            <li><a href="javascript:user_center('user_list')">用户列表</a></li>
+                            <li><a href="javascript:user_center('member_list',0,1)">社员列表</a></li>
+                            <li><a href="javascript:user_center('user_request',0,1)">加入申请</a></li>
+                            <li><a href="javascript:user_center('user_list',0,1)">用户列表</a></li>
                         </ul>
                     </li>
                     <li>

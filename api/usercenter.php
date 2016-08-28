@@ -1,5 +1,7 @@
 <?php
     $mode = $_POST["mode"];
+    $uc_extra = $_POST["extra"];
+    $uc_page = $_POST["page"];
     if (!empty($mode)){
         require_once("database.php");
         $uc_database = new Database();
