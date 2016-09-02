@@ -53,5 +53,6 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
+        <script>window.onload = user_center('person_info',0,1); </script>
     </body>
 </html>
