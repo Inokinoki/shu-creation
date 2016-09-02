@@ -185,12 +185,37 @@ function onLoginReceive(data, status){
     document.getElementById("comfirm-button").removeAttribute("disabled");
 }
 
+function onActiviateLoginReceive(data, status){
+    if (status){
+        result = data.split("|");
+        if (result[0] == "0"){
+            document.cookie = "creation_uuid = " + result[1]; 
+            self.location = "./index.php";
+        } else if (result[0] == "1"){
+            document.getElementById("wrong-tip").innerHTML = 
+                "<div class='alert alert-danger' role='alert'>密码错误！</div>";
+        }
+    } else {
+        alert("网络错误，请稍后重试。");
+        document.getElementById("wrong-tip").innerHTML = "";
+    }
+    document.getElementById("comfirm-button").removeAttribute("disabled");
+}
+
 function onActiviateReceive(data, status){
     if (status){
         result = data.split("|");
         if (result[0] == "0"){
-            alert("激活成功，点击确定前往首页");
-            self.location = "./index.php";
+            alert("激活成功，点击确定自动登录");
+            var username = getUsername("activiate-username");
+            var password = getPassword("activiate-password");
+            if (username && password){
+                $.post("./api/login.php",
+                {
+                    username : username,
+                    password : password
+                }, onActiviateLoginReceive );
+            }
         } else if (result[0] == "1"){
             document.getElementById("wrong-tip").innerHTML = 
                 "<div class='alert alert-danger' role='alert'>密码错误！请确认是您在上海大学统一身份认证的密码。</div>";
