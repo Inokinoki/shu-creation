@@ -43,9 +43,9 @@
 </div>
 </div>
 <p>
-    <a class="btn btn-primary" href="javascript:user_center('user_request',0,<?php echo $uc_page?>)">返回列表</a>
-    <a class="btn btn-success">批准申请</a>
-    <a class="btn btn-danger">拒绝申请</a>
+    <a id="backlink" class="btn btn-primary" href="javascript:user_center('user_request',0,<?php echo $uc_page?>)">返回列表</a>
+    <a class="btn btn-success" href="javascript:requestAccess(<?php echo $uc_extra;?>)">批准申请</a>
+    <a class="btn btn-danger" href="javascript:requestRefuse(<?php echo $uc_extra;?>)">拒绝申请</a>
 </p>
 
 <?php
