@@ -22,6 +22,7 @@
         $database = new Database();
         $database->connect();
         $request_result = $database->query("SELECT * FROM request WHERE state = 0");
+        $member_count = 0;
         while ($request_row = mysql_fetch_array($request_result)) {
             echo "<tr>";
             echo "<td>".$request_row["name"]."</td>";
@@ -41,10 +42,12 @@
                 .$request_row["_id"].", 1)\">详情</a>";
             echo "</td>";
             echo "</tr>";
+            $member_count++;
         }
 ?>
     </tbody>
 </table>
+<p><?php echo "总计: ".$member_count." 份"; ?></p>
 <?php
     } else {
         require_once("no_permission.php");

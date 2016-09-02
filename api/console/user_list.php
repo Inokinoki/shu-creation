@@ -18,6 +18,7 @@
         require_once("database.php");
         $database = new Database();
         $database->connect();
+        $member_count = 0;
         $user_result = $database->query("SELECT * FROM accounts");
         while ($user_row = mysql_fetch_array($user_result)) {
             echo "<tr>";
@@ -36,10 +37,12 @@
             }
             echo "</td>";
             echo "</tr>";
+            $member_count++;
         }
 ?>
     </tbody>
 </table>
+<p><?php echo "总计: ".$member_count." 人"; ?></p>
 <?php
     } else {
         require_once("no_permission.php");

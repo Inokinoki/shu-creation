@@ -21,6 +21,7 @@
         $database = new Database();
         $database->connect();
         $member_result = $database->query("SELECT * FROM member");
+        $member_count = 0;
         while ($member_row = mysql_fetch_array($member_result)) {
             echo "<tr>";
             echo "<td>".$member_row["name"]."</td>";
@@ -46,10 +47,12 @@
             }
             echo "</td>";
             echo "</tr>";
+            $member_count++;
         }
 ?>
     </tbody>
 </table>
+<p><?php echo "总计: ".$member_count." 人"; ?></p>
 <?php
     } else {
         require_once("no_permission.php");
