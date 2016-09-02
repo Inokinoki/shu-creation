@@ -30,6 +30,8 @@
                     '$member_phone', '$member_sex', $member_campus)");
                 $database->query("UPDATE request SET state = 1
                     WHERE _id = $request_id");
+                    $database->query("UPDATE accounts SET level = 1
+                    WHERE username = $member_id");
                 echo 0;
             }
         } else if($member_source==2){
