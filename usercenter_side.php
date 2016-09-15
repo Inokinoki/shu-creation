@@ -12,18 +12,17 @@
                         <ul class="nav-ul collapse" id="ActivityCollapse">
                             <li><a>正在报名</a></li>
                             <li><a>正在进行</a></li>
-                            <li><a>已结束</a></li>
+                            <li><a>全部活动</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#CourseCollapse" data-toggle="collapse" data-target="#CourseCollapse" 
                             aria-expanded="false" aria-controls="CourseCollapse">课程管理</a>
                         <ul class="nav-ul collapse" id="CourseCollapse">
-                            <li><a>我的课程</a></li>
-                            <li><a>加入课程</a></li>
-                            <li><a>课程资料</a></li>
+                            <li><a href="javascript:user_center('my_course',0,1)">我的课程</a></li>
+                            <li><a href="javascript:user_center('join_course',0,1)">加入课程</a></li>
                             <li><a>C语言IDE</a></li>
-                            <li><a>HTML编辑</a></li>
+                            <li><a href="/cceditor-HTML">HTML编辑</a></li>
                         </ul>
                     </li>
 <?php
