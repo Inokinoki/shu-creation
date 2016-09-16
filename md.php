@@ -10,7 +10,7 @@
 
     <title>创幻社Markdown Editor</title>
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/md-styles.css">
     <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
@@ -21,13 +21,32 @@
     <![endif]-->
 </head>
 <body>
+<?php
+		require_once("./api/level.php");
+    $level = new LevelSystem(0, $_COOKIE["creation_uuid"]);
+    if ($level->validate()){
+				$atype = $_GET["type"];
+				$target = $_GET["target"];
+				if(empty($atype))
+						$atype = 0;	// new
+				else if($atype==2)
+						$atype == 2;
+				else
+						$atype = 1;	// static
+				// TO-DO  read article old version
+?>
 	<div id="float-layer">
-		<span><strong>当前文章：  </strong></span>
-		<a class="btn btn-default" href="javascript:md_run()">提交</a>
+			<span><strong>当前文章：  </strong></span>
+<?php 
+		if($atype==0)
+				echo "<a class='btn btn-default' href='javascript:newArticle()'>提交</a>";
+		else
+				echo "<a class='btn btn-default' href='javascript:staticArticle()'>提交</a>";
+?>		
 	</div>
 	<div id="html-main-container" class="main-container col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <textarea id="html-main-textarea"></textarea>
-    </div>
+      <textarea id="html-main-textarea"></textarea>
+  </div>
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document" style="z-index:11;">
@@ -49,7 +68,6 @@
 	  </div>
 	</div>
 	<script>
-		//"guide"
 		var simplemde = new SimpleMDE({
 			toolbar: [	{name: "bold", action: SimpleMDE.toggleBold, className: "fa fa-bold", title: "粗体"},
 						{name: "italic", action: SimpleMDE.toggleItalic, className: "fa fa-italic", title: "斜体"},
@@ -80,5 +98,9 @@
 		}
 		window.onload = customLoad;
 	</script>
+<?php
+		} else
+				require_once("./api/console/no_permission.php");
+?>
 </body>
 </html>
