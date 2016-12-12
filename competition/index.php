@@ -12,9 +12,6 @@
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="./js/md5.js"></script>
-        <script src="./js/validate.js"></script>
-        <script src="./js/account.js"></script>
 
         <!--[if lt IE 9]>
         <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
