@@ -23,7 +23,7 @@
     </head>
     <body>
 			<?php
-				require_once("./header.php");
+				require_once("../header.php");
 			?>
         <div class="container" role="main">
             <div class="panel panel-default">
