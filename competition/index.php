@@ -76,11 +76,15 @@
                             <p>
 								欢迎您报名参加 第七届 “中欧杯” 创幻机器人大赛。<br/>
 								<br/>
-								请于<span class="text-danger">2016年12月25日 18：00 前</span>将报名表发送至<span class="text-primary">zhongouchuanghuan@163.com</span><br/>
+								请于<span class="text-danger">2017年1月2日 18：00 前</span>将报名表发送至<span class="text-primary">zhongouchuanghuan@163.com</span><br/>
 								<br/>
 								点击此处
 								<a type="button" class="btn btn-default" href="./第七届中欧杯创幻机器人大赛报名表.docx">下载</a>
 								报名表。
+							</p>
+							<p>
+								使用微信或QQ打开本页面的同学请点击右上角菜单-><span class="text-danger">在浏览器中打开本页面</span> 才可正常下载报名表<br/>
+								<br/>
 							</p>
                         </div>
                     </div>
