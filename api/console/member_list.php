@@ -22,7 +22,7 @@
         $database->connect();
         $member_result = $database->query("SELECT * FROM member");
         $member_count = 0;
-        while ($member_row = mysql_fetch_array($member_result)) {
+        while ($member_row = mysqli_fetch_array($member_result)) {
             echo "<tr>";
             echo "<td>".$member_row["name"]."</td>";
             echo "<td>".$member_row["student_id"]."</td>";
@@ -32,7 +32,7 @@
                 echo "<td>男</td>";
             $campus_id = $member_row['campus'];
             $campus_result = $database->query("SELECT * FROM campus WHERE _id = $campus_id");
-            $campus_row = mysql_fetch_array($campus_result);
+            $campus_row = mysqli_fetch_array($campus_result);
             echo "<td>".$campus_row["name"]."</td>";
             echo "<td>".$member_row["email"]."</td>";
             echo "<td>".$member_row["phone_number"]."</td>";

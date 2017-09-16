@@ -34,14 +34,14 @@
                     $database = new Database();
                     $database->connect();
                     if ($database->exist("uuid", $uuid ,"accounts")){
-                        $result = mysql_fetch_array(
+                        $result = mysqli_fetch_array(
                             $database->query("SELECT * FROM accounts WHERE uuid = '$uuid'"));
                         $student_name = $result["name"];
                         $student_id = $result["username"];
                         if (!$database->exist("student_id", $student_id, "member")){
                             // Not a member
                             $request_result = $database->query("SELECT * FROM request WHERE username = '$student_id' AND state = 0");
-                            if( mysql_num_rows($request_result)==0 ){
+                            if( mysqli_num_rows($request_result)==0 ){
                                 // Not requesting
              ?>
                 <div class="panel-heading"><h2>报名表</h2></div>
@@ -77,7 +77,7 @@
                                     <select name="campus" id="join-student-campus" class="form-control">
                                         <?php
                                             $campus_result = $database->query("SELECT * FROM campus");
-                                            while ($row = mysql_fetch_array($campus_result)){
+                                            while ($row = mysqli_fetch_array($campus_result)){
                                                 echo "<option value='".$row["_id"]."'>".$row["name"]."</option>\n";
                                             }
                                         ?>

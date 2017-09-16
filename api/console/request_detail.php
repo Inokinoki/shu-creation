@@ -15,7 +15,7 @@
         $database = new Database();
         $database->connect();
         $request_result = $database->query("SELECT * FROM request WHERE _id = $uc_extra");
-        while ($request_row = mysql_fetch_array($request_result)) {
+        while ($request_row = mysqli_fetch_array($request_result)) {
             echo "<tr>";
             echo "<td><strong>姓名</strong></td><td>".$request_row["name"]."</td>";
             if ($request_row["sex"]==1)
@@ -24,7 +24,7 @@
                 echo "<td><strong>性别</strong></td><td>男</td>";
             $campus_id = $request_row['campus'];
             $campus_result = $database->query("SELECT * FROM campus WHERE _id = $campus_id");
-            $campus_row = mysql_fetch_array($campus_result);
+            $campus_row = mysqli_fetch_array($campus_result);
             echo "<td><strong>学院</strong></td><td>".$campus_row["name"]."</td>";
             echo "<td><strong>学号</strong></td><td>".$request_row["username"]."</td>";
             echo "</tr>";

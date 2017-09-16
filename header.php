@@ -58,7 +58,7 @@
 	}else{
         $uuid = $_COOKIE["creation_uuid"];
         $result = $database->query("SELECT * FROM accounts WHERE uuid = '$uuid'");
-        $result = mysql_fetch_array($result);
+        $result = mysqli_fetch_array($result);
 ?>
                         <li><a href="./user.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 <?php 

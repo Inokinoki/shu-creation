@@ -33,7 +33,7 @@
                     $database = new Database();
                     $database->connect();
                     $result = $database->query("SELECT * FROM static_articles WHERE name = 'about'");
-                    $content = mysql_fetch_array($result);
+                    $content = mysqli_fetch_array($result);
                     echo $content["content"];
                 ?>
             </div>

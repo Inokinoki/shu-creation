@@ -18,8 +18,8 @@ class LevelSystem{
             $database = new Database();
             $database->connect();
             $result = $database->query("SELECT * FROM accounts WHERE uuid = '$this->uuid'");
-            if (mysql_num_rows($result)>0){
-                $row = mysql_fetch_array($result);
+            if (mysqli_num_rows($result)>0){
+                $row = mysqli_fetch_array($result);
                 if ($row["level"]>=$this->level){
                     $this->permit = true;
                 }

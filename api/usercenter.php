@@ -7,7 +7,7 @@
         $uc_database = new Database();
         $uc_database->connect(); 
         $uc_result = $uc_database->query("SELECT * FROM user_center WHERE name = '$mode'");
-        $uc_array = mysql_fetch_array($uc_result);
+        $uc_array = mysqli_fetch_array($uc_result);
         if (!empty($uc_array["link"]))
             require_once($uc_array["link"]);
         else 

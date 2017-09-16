@@ -14,7 +14,7 @@
             $database->connect();
 
             $member_result = $database->query("SELECT * FROM request WHERE _id = $request_id");
-            $member_info = mysql_fetch_array($member_result);
+            $member_info = mysqli_fetch_array($member_result);
             $member_id = $member_info["username"];
             if ($database->exist("student_id", $member_id, "member")){
                 echo 2;

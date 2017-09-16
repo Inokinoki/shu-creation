@@ -23,7 +23,7 @@
         $database->connect();
         $uuid = $_COOKIE["creation_uuid"];
         $result = $database->query("SELECT * FROM accounts WHERE uuid = '$uuid'");
-        $result = mysql_fetch_array($result);
+        $result = mysqli_fetch_array($result);
         if (empty($result["nickname"]))
             echo "User";
         else 

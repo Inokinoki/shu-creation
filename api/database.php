@@ -8,24 +8,24 @@ class Database{
 
 	function connect(){
 		if($this->db == null){
-			$this->db = mysql_connect($this->db_host, $this->db_user, $this->db_pwd);
+			$this->db = mysqli_connect($this->db_host, $this->db_user, $this->db_pwd);
 			if(!$this->db){
-				die(mysql_error());
+				die(mysqli_error());
 			}
-			mysql_query("SET names utf8", $this->db);
+			mysqli_query($this->db, "SET names utf8");
 			// Limit in creation database.
-			mysql_select_db("creation", $this->db);
+			mysqli_select_db($this->db, "creation");
 		}
 	}
 
 	function query($db_query_expression){
-		return mysql_query($db_query_expression, $this->db);
+		return mysqli_query($this->db, $db_query_expression);
 	}
 
 	function count($key, $value, $table){
-			$result = mysql_query("SELECT * FROM $table WHERE $key = '$value'", $this->db);
-			// echo "row number:".mysql_num_rows($result)."\n";
-			return mysql_num_rows($result);
+			$result = mysqli_query($this->db, "SELECT * FROM $table WHERE $key = '$value'");
+			// echo "row number:".mysqli_num_rows($result)."\n";
+			return mysqli_num_rows($result);
 	}
 
 	function exist($key, $value, $table){
@@ -38,12 +38,12 @@ class Database{
 	}
 
 	function error(){
-		return mysql_errno($this->db).":".mysql_error($this->db);
+		return mysqli_errno($this->db).":".mysqli_error($this->db);
 	}
 
 	function __destruct() {
 		if(!$this->db){
-			mysql_close($this->db);
+			mysqli_close($this->db);
 		}
 	}
 }

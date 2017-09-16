@@ -20,7 +20,7 @@
         $database->connect();
         $member_count = 0;
         $user_result = $database->query("SELECT * FROM accounts");
-        while ($user_row = mysql_fetch_array($user_result)) {
+        while ($user_row = mysqli_fetch_array($user_result)) {
             echo "<tr>";
             echo "<td>".$user_row["_id"]."</td>";
             echo "<td>".$user_row["name"]."</td>";

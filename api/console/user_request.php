@@ -23,7 +23,7 @@
         $database->connect();
         $request_result = $database->query("SELECT * FROM request WHERE state = 0");
         $member_count = 0;
-        while ($request_row = mysql_fetch_array($request_result)) {
+        while ($request_row = mysqli_fetch_array($request_result)) {
             echo "<tr>";
             echo "<td>".$request_row["name"]."</td>";
             echo "<td>".$request_row["username"]."</td>";
@@ -34,7 +34,7 @@
                 echo "<td>男</td>";
             $campus_id = $request_row['campus'];
             $campus_result = $database->query("SELECT * FROM campus WHERE _id = $campus_id");
-            $campus_row = mysql_fetch_array($campus_result);
+            $campus_row = mysqli_fetch_array($campus_result);
             echo "<td>".$campus_row["name"]."</td>";
             echo "<td>".$request_row["email"]."</td>";
             echo "<td>".$request_row["phone_number"]."</td>";

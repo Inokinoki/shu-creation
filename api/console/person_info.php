@@ -7,13 +7,13 @@
         $database = new Database();
         $database->connect();
         $person_result = $database->query("SELECT * FROM accounts WHERE uuid = '$person_uuid'");
-        $person_row = mysql_fetch_array($person_result);
+        $person_row = mysqli_fetch_array($person_result);
         $person_id = $person_row["username"];
         
         // Is member?
         $member_result = $database->query("SELECT * FROM member WHERE student_id = '$person_id'");
         $is_member = false;
-        if (mysql_num_rows($member_result)>0){
+        if (mysqli_num_rows($member_result)>0){
             $is_member = true;
         }
 ?>
@@ -31,7 +31,7 @@
                 case 4:echo "<span class='label label-primary'>社长</span>";break;
             }
         } else {
-            $member_row = mysql_fetch_array($member_result);
+            $member_row = mysqli_fetch_array($member_result);
             $user_level = $member_row["level"];
             switch($user_level){
                 case 0:echo "<span class='label label-default'>前社员</span>";break;
@@ -58,7 +58,7 @@
             echo "<tr><td>性别：</td><td>男</td></tr>";
         $campus_id = $member_row['campus'];
         $campus_result = $database->query("SELECT * FROM campus WHERE _id = $campus_id");
-        $campus_row = mysql_fetch_array($campus_result);
+        $campus_row = mysqli_fetch_array($campus_result);
         echo "<tr><td>学院：</td><td>".$campus_row["name"]."</td></tr>";
         echo "<tr><td>身份：</td><td>";
         $member_level = $member_row["level"];

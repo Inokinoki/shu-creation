@@ -53,7 +53,7 @@
     $database->connect();
     // Get boss info
     $boss_result = $database->query("SELECT * FROM member WHERE level = 4");
-    while ($boss_info = mysql_fetch_array($boss_result)){
+    while ($boss_info = mysqli_fetch_array($boss_result)){
         echo "<div class='col-xs-12 col-sm-6 col-md-6 col-lg-4'>
                 <div class='panel panel-info'>
                     <div class='panel-heading'>".$boss_info["name"]."</div>
@@ -65,7 +65,7 @@
             </div>";
     }
     $fboss_result = $database->query("SELECT * FROM member WHERE level = 3");
-    while ($fboss_info = mysql_fetch_array($fboss_result)){
+    while ($fboss_info = mysqli_fetch_array($fboss_result)){
         echo "<div class='col-xs-12 col-sm-6 col-md-6 col-lg-4'>
                 <div class='panel panel-success'>
                     <div class='panel-heading'>".$fboss_info["name"]."</div>
