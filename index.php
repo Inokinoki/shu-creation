@@ -69,9 +69,11 @@
             </div>
             <div class="hidden-sm hidden-xs col-md-12 embed-responsive embed-responsive-16by9">
             <!-- Video -->
-                <embed  height="100%" width="100%" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" 
-                    src="http://static.hdslb.com/miniloader.swf" flashvars="aid=5982262&page=1" 
-                    pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
+                <embed height="415" width="544" quality="high" 
+                    allowfullscreen="true" type="application/x-shockwave-flash" 
+                    src="//static.hdslb.com/miniloader.swf" 
+                    flashvars="aid=5982262&page=1" 
+                    pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
                 </embed>
             </div>
 
