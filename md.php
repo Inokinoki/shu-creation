@@ -9,10 +9,10 @@
     <meta name="description" content="Shanghai University Creation Club Official Website">
 
     <title>创幻社Markdown Editor</title>
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/md-styles.css">
-    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 	<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 	<!--[if lt IE 9]>
